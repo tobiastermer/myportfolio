@@ -1,7 +1,9 @@
+@import '../../../styles.scss';
+
 header {
     width: calc(100% - 200px);
-    padding: 37px 100px 37px 100px;
-    background-color: #141D2F;
+    padding: 37px $padding_side 37px $padding_side;
+    background-color: $dark_blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,13 +17,14 @@ header {
             text-decoration: none;
             color: white;
             font-size: 23px;
-            border-bottom: 3px solid #141D2F;
+            border-bottom: 3px solid $dark_blue;
+            transition: all 275ms ease-in-out;
 
             &:hover {
                 cursor: pointer;
                 color: #00BEE8;
-                transition: all 475ms ease-in-out;
-                border-bottom: 3px solid #4B47FF;
+                border-bottom: 3px solid $blue;
+                
             }
         }
 

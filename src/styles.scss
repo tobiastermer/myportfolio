@@ -5,6 +5,12 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+$dark_blue: #141D2F;
+$blue: #4B47FF;
+$light_blue: #00BEE8;
+
+$padding_side: 100px;
+
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -58,6 +64,37 @@ body {
     src: url('./assets/fonts/poppins-v20-latin-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+.btn {
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    font-size: 23px;
+    color: white;
+    box-shadow: 4px 4px 4px 0px #00000040;
+    display: block;
+    max-width: fit-content;
+    border: 0;
+    transition: all 275ms ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-primary {
+    background-color: $light_blue;
+    transition: all 275ms ease-in-out;
+
+    &:hover {
+        background-color: $blue;
+    }
+}
+
+.btn-project {}
+
+.btn-git {}
+
+
 
 @media (min-width: 800px) {
     .desktop-hidden {
