@@ -1,0 +1,49 @@
+header {
+    width: calc(100% - 200px);
+    padding: 37px 100px 37px 100px;
+    background-color: #141D2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    div {
+        display: flex;
+        gap: 29px;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 23px;
+            border-bottom: 3px solid #141D2F;
+
+            &:hover {
+                cursor: pointer;
+                color: #00BEE8;
+                transition: all 475ms ease-in-out;
+                border-bottom: 3px solid #4B47FF;
+            }
+        }
+
+        img {
+            width: 30px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+
+
+
+}
+
+.logo-firstname {
+    width: 150px;
+    height: auto;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
