@@ -2,13 +2,12 @@
 
 section {
     width: calc(100vw - $padding_side - 0);
-    background-color: $dark_blue_sec;
     display: flex;
     justify-content: space-between;
     gap: 150px;
     padding: 100px 0 100px $padding_side;
     // height: calc(100vh - 135px);
-
+    overflow: hidden;
 }
 
 .about-me-content-container {

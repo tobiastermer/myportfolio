@@ -1,7 +1,6 @@
 @import '../../../styles.scss';
 
 section {
-    background-color: $dark_blue;
     display: flex;
     justify-content: space-between;
     padding: 0 $padding_side 0 $padding_side;
@@ -56,15 +55,14 @@ section {
             margin-block-start: 0;
             margin-block-end: 0;
             line-height: 1;
-            text-wrap: nowrap;
-            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .main-headline {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            text-wrap: nowrap;
+            white-space: nowrap;
 
 
             h1 {

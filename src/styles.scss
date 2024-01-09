@@ -1,17 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
-/* poppins-100 - latin */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
 
 $dark_blue: #141D2F;
-$dark_blue_sec: #151E30;
 $blue: #4B47FF;
 $light_blue: #00BEE8;
 
 $padding_side: 100px;
 
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: $dark_blue;
+    overflow-x: hidden;
+}
+
+
+/* poppins-100 - latin */
 @font-face {
     font-display: swap;
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -72,6 +75,8 @@ h2 {
     margin-block-start: 0;
     margin-block-end: 0;
     color: white;
+    // margin-bottom: 34px;
+    white-space: nowrap;
 }
 
 .btn {
@@ -117,6 +122,10 @@ h2 {
 
 .aligned-left{
     text-align: left;
+}
+
+.aligned-right{
+    text-align: right;
 }
 
 

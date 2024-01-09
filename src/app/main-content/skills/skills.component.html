@@ -1,1 +1,19 @@
-<p>skills works!</p>
+<section>
+
+    <div class="skills-icons-container">
+        <app-skill *ngFor="let skill of skills;" [skill]="skill"></app-skill>
+    </div>
+
+    <div class="skills-headline-container">
+        <div class="skills-headline-content">
+            <h2>My skills</h2>
+            <p class="content-text aligned-right">I have grown my frontend developments skills that have allowed me to
+                create different real projects.</p>
+            <button class="btn btn-primary">Get in touch</button>
+        </div>
+        <div class="horicontal-lign"></div>
+    </div>
+
+    <img class="shadow" src="../../../assets/img/shadow3.png" alt="">
+
+</section>
