@@ -1,0 +1,69 @@
+@import '../../../styles.scss';
+
+section {
+    width: calc(100vw - $padding_side - 0);
+    background-color: $dark_blue_sec;
+    display: flex;
+    justify-content: space-between;
+    gap: 150px;
+    padding: 100px 0 100px $padding_side;
+    // height: calc(100vh - 135px);
+
+}
+
+.about-me-content-container {
+    display: flex;
+    flex-direction: column;
+
+    .about-me-content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        .content-child {
+            display: flex;
+
+            .icon-container {
+                min-width: 85px;
+                text-align: center;
+
+                .icon {
+                    height: 50px;
+                    width: auto;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+.about-me-image-container {
+    padding-top: 54px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .portrait {
+        height: 453px;
+        width: 453px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid $light_blue;
+        z-index: 1;
+    }
+
+    .horicontal-lign {
+        width: calc($padding_side + $padding_side);
+        height: 4px;
+        border: 0;
+        background-color: $light_blue;
+        z-index: 1;
+    }
+
+    .shadow {
+        position: absolute;
+        right: -300px;
+    }
+}

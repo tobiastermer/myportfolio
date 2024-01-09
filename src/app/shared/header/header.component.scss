@@ -8,37 +8,84 @@ header {
     justify-content: space-between;
     align-items: center;
 
-
-    div {
+    nav {
         display: flex;
         gap: 29px;
 
-        a {
-            text-decoration: none;
-            color: white;
-            font-size: 23px;
-            border-bottom: 3px solid $dark_blue;
-            transition: all 275ms ease-in-out;
+        .language-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
 
-            &:hover {
-                cursor: pointer;
-                color: #00BEE8;
-                border-bottom: 3px solid $blue;
-                
+            .language-link {
+                text-decoration: none;
+                color: white;
+                font-size: 18px !important;
+                transition: all 275ms ease-in-out;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $light_blue;
+                }
+            }
+
+            .vertical-lign {
+                height: 14px;
+                background-color: white;
+                width: 2px;
+                border: 0;
             }
         }
 
-        img {
-            width: 30px;
+        .nav-container {
 
-            &:hover {
-                cursor: pointer;
+            display: flex;
+            gap: 29px;
+
+            .nav-child {
+
+                display: flex;
+                flex-direction: column;
+
+                .nav-link {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 23px;
+                }
+
+                .underline {
+                    width: 55px;
+                    height: 3px;
+                    background-color: $dark_blue;
+                    transition: all 275ms ease-in-out;
+                }
+
+                &:hover {
+
+                    a {
+                        cursor: pointer;
+                        color: $light_blue;
+                    }
+
+                    .underline {
+                        cursor: pointer;
+                        background-color: $blue;
+                    }
+                }
+            }
+
+
+
+            img {
+                width: 30px;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
+
     }
-
-
-
 
 }
 
