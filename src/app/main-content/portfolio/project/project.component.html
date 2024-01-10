@@ -1,1 +1,18 @@
-<p>project works!</p>
+<div class="project-container">
+
+    <img src="../../../assets/img/{{ picture }}" alt="{{ picture }}" class="project-image"
+        [ngClass]="{'reverse-order': index !== undefined && index % 2 !== 0}">
+
+    <div class="project-content">
+        <div class="text-content-container">
+            <h3>{{ projectname }}</h3>
+            <h4>{{ languages }}</h4>
+            <p class="content-text aligned-left">{{ description }}</p>
+        </div>
+        <div class="project-buttons">
+            <a class="btn btn-project" href="{{ linkLive }}">Live test</a>
+            <a class="btn btn-git" href="{{ linkGit }}">Github</a>
+        </div>
+    </div>
+
+</div>

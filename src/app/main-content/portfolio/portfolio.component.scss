@@ -1,0 +1,50 @@
+@import '../../../styles.scss';
+
+section {
+    width: calc(100vw - $padding_side - 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 150px;
+    padding: 100px 0 100px $padding_side;
+    // height: calc(100vh - 135px);
+    overflow: hidden;
+}
+
+.portfolio-headline-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+
+    .portfolio-headline-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 34px;
+        min-width: 471px;
+    }
+
+}
+
+.horicontal-lign {
+    height: 4px;
+    border: 0;
+    background-color: $blue;
+    margin-top: 70px;
+}
+
+.w-109 {
+    min-width: 109px;
+}
+
+.w-484 {
+    min-width: 484px;
+}
+
+.app-project:nth-child(even) {
+    .project-container {
+        .project-image {
+            order: 1;
+        }
+    }
+}

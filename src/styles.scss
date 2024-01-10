@@ -89,6 +89,7 @@ h2 {
     max-width: fit-content;
     border: 0;
     transition: all 275ms ease-in-out;
+    text-decoration: none;
 
     &:hover {
         cursor: pointer;
@@ -105,12 +106,20 @@ h2 {
 }
 
 .btn-project {
-    background-color: $light_blue;
+    background-color: $blue;
+    border: 1px solid $blue;
+    &:hover {
+        border: 1px solid $light_blue;
+        background-color: $light_blue;
+    }
 }
 
 .btn-git {
-    background-color: $light_blue;
-
+    background-color: $dark_blue;
+    border: 1px solid $light_blue;
+    &:hover {
+        background-color: $light_blue;
+    }
 }
 
 .content-text{
@@ -126,6 +135,10 @@ h2 {
 
 .aligned-right{
     text-align: right;
+}
+
+.aligned-center {
+    text-align: center;
 }
 
 

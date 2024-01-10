@@ -1,1 +1,21 @@
-<p>portfolio works!</p>
+<section>
+
+    <div class="portfolio-headline-container">
+        <div class="horicontal-lign w-109"></div>
+        <div class="portfolio-headline-content">
+            <h2>Portfolio</h2>
+            <p class="content-text aligned-center">This page is a sample of my work - please feel free to try them out.
+            </p>
+        </div>
+        <div class="horicontal-lign w-484"></div>
+    </div>
+
+    <div class="portfolio-projects-container">
+
+        <app-project *ngFor="let project of portfolio; let i = index" [projectname]="project.projectname"
+            [languages]="project.languages" [description]="project.description" [linkLive]="project.linkLive"
+            [linkGit]="project.linkGit" [picture]="project.picture" [index]="i">
+        </app-project>
+    </div>
+
+</section>
