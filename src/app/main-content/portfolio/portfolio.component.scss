@@ -26,6 +26,27 @@ section {
 
 }
 
+.portfolio-projects-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .shadow {
+        position: absolute;
+        z-index: -1;
+    }
+    
+    .shadow1 {
+        left: -500px;
+        top: 600px;
+    }
+    
+    .shadow2 {
+        right: -400px;
+        top: 1500px;
+    }
+}
+
 .horicontal-lign {
     height: 4px;
     border: 0;
@@ -48,3 +69,4 @@ section {
         }
     }
 }
+

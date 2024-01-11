@@ -1,17 +1,17 @@
 <div class="project-container">
 
-    <img src="../../../assets/img/{{ picture }}" alt="{{ picture }}" class="project-image"
+    <img src="../../../assets/img/projects/{{ picture }}" alt="{{ picture }}" class="project-image"
         [ngClass]="{'reverse-order': index !== undefined && index % 2 !== 0}">
 
-    <div class="project-content">
+    <div class="project-content" [ngClass]="{'aligned-right': index !== undefined && index % 2 !== 0}">
         <div class="text-content-container">
             <h3>{{ projectname }}</h3>
             <h4>{{ languages }}</h4>
-            <p class="content-text aligned-left">{{ description }}</p>
+            <p class="content-text">{{ description }}</p>
         </div>
-        <div class="project-buttons">
-            <a class="btn btn-project" href="{{ linkLive }}">Live test</a>
-            <a class="btn btn-git" href="{{ linkGit }}">Github</a>
+        <div class="project-buttons" [ngClass]="{'jc-flexend': index !== undefined && index % 2 !== 0}">
+            <a class="btn btn-project" href="{{ linkLive }}" target="blank">Live test</a>
+            <a class="btn btn-git" href="{{ linkGit }}" target="blank">Github</a>
         </div>
     </div>
 
