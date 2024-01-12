@@ -1,0 +1,125 @@
+@import '../../../styles.scss';
+
+section {
+    width: calc(100vw - $padding_side - 0);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px $padding_side 100px 0;
+    // height: calc(100vh - 135px);
+    overflow: hidden;
+}
+
+.contact-headline-container {
+    display: flex;
+    gap: 50px;
+
+    .horicontal-lign {
+        height: 4px;
+        border: 0;
+        background-color: $blue;
+        min-width: 50px;
+        margin-top: 65px;
+    }
+    
+}
+
+.contact-headline-content {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.contact-content-container {
+    display: flex;
+    text-align: left;
+    padding-left: $padding_side;
+    gap: 100px;
+
+    .contact-content-text {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        h3{
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
+
+    form {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        min-width: 50%;
+
+        input, textarea {
+            width: 100%;
+            padding: 15px 25px 15px 25px;
+            border-radius: 10px;
+            border: 1px solid $blue;
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            font-family: 'Poppins';
+
+            &:focus {
+                border: 1px solid $light_blue;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .form-privacy-check {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            width: 100%;
+            color: white;
+            text-align: left;
+
+            [type="checkbox"] {
+                width:unset;
+                padding: 0;
+                margin-left: -25px;
+                border: 1px solid $light_blue;
+            }
+
+            p {
+                margin-block-start: 0;
+                margin-block-end: 0;
+                font-size: 14px;
+            }
+
+            a{
+                text-decoration: none;
+                color: $blue;
+                font-size: 14px;
+                &:hover {
+                    color: $light_blue;
+                }
+            }
+        }
+    }
+
+    
+}
+
+
+
+.shadow {
+    position: absolute;
+    z-index: -1;
+    left: -500px;
+    top: 600px;
+}
