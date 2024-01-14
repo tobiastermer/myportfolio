@@ -1,0 +1,62 @@
+@import '../../../styles.scss';
+
+footer {
+    border-top: 4px solid $light_blue;
+    padding: 100px $padding_side 100px $padding_side;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        p {
+            color: white;
+            font-size: 23px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
+
+    .social-container {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+        bottom: 40px;
+        left: 0;
+        z-index: 10;
+    
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 42px;
+    
+            .icon {
+                height: 40px;
+                width: 40px;
+            }
+    
+            
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .logo-firstname {
+        width: 216px;
+        height: auto;
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

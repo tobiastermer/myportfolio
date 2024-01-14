@@ -14,18 +14,44 @@
             <p class="content-text aligned-left">Need a Fullstack developer? <b>Contact me!</b>
             </p>
         </div>
-        <form (submit)="sendMail()" #form ngNativeValidate>
-            <input type="text" required placeholder="Your name" name="name" #formName>
-            <input type="text" required placeholder="Your email" name="email" #formEmail>
-            <textarea name="" id="" cols="30" rows="10" required laceholder="Your message" name="message" #formMessage></textarea>
-            <div class="form-privacy-check">
-                <input type="checkbox" required>
-                <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</p>
+        <form (submit)="sendMail()" #form="ngForm">
+            <div class="input-container">
+                <input type="text" ngModel name="name" #formName="ngModel" required minlength="5"
+                    placeholder="Your name">
+                <div *ngIf="formName.invalid && formName.touched" class="error-message">Name is required and must be at
+                    least 5 characters.</div>
             </div>
-            <button class="btn btn-primary" #formButton>Send message</button>
+            <div class="input-container">
+                <input type="email" ngModel name="email" #formEmail="ngModel" required placeholder="Your email"
+                    [class.default-border]="areAllFieldsEmpty()"
+                    [class.ng-invalid]="formEmail.invalid || (formEmail.value && !isValidEmail(formEmail.value))">
+                <div *ngIf="(formEmail.invalid || (formEmail.value && !isValidEmail(formEmail.value))) && formEmail.touched"
+                    class="error-message">
+                    A valid email is required.
+                </div>
+            </div>
+            <div class="input-container">
+                <textarea ngModel name="message" #formMessage="ngModel" required minlength="10"
+                    placeholder="Your message"></textarea>
+                <div *ngIf="formMessage.invalid && formMessage.touched" class="error-message">Message is required and
+                    must
+                    be at least 10 characters.</div>
+            </div>
+            <div class="input-container">
+                <div class="form-privacy-check">
+                    <input type="checkbox" ngModel name="privacy" #formPrivacy="ngModel" required>
+                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+                    </p>
+                    <div *ngIf="formPrivacy.invalid && formPrivacy.touched" class="error-message">You must agree to the
+                        privacy policy.</div>
+                </div>
+            </div>
+            <button class="btn btn-primary" [disabled]="!form.valid">Send message</button>
+            <div *ngIf="formSubmittedSuccessfully" class="success-message">Your message has been sent successfully!</div>
         </form>
+
     </div>
 
-    <img class="shadow shadow1" src="../../../assets/img/shadow4.png" alt="">
+    <img class="shadow" src="../../../assets/img/shadow6.png" alt="">
 
 </section>
