@@ -2,7 +2,7 @@
 
 ########### CONFIG ###############
 
-$recipient = ''; # Bitte hier deine E-Mail angeben
+$recipient = 'mail@tobias-termer.de'; # Bitte hier deine E-Mail angeben
 $redirect = 'success.html';
 
 ########### CONFIG END ###########
@@ -16,6 +16,7 @@ $redirect = 'success.html';
 #  1) Upload this file to your FTP Server
 #  2) Send a POST request to this file, including
 #     [name] The name of the sender (Absender)
+#     [formEmail] Email of the sender
 #     [message] Message that should be send to you
 #
 ##################################
@@ -39,11 +40,29 @@ switch ($_SERVER['REQUEST_METHOD']) {
         header("Access-Control-Allow-Headers: content-type");
         exit;
     case ("POST"): //Send the email;
+        // Bereinigen und Validieren der Eingaben
+        $name = filter_var($_POST['name'] ?? 'Unbekannter Absender', FILTER_SANITIZE_STRING);
+        $email = filter_var($_POST['email'] ?? 'Keine Email angegeben', FILTER_VALIDATE_EMAIL);
+        $message = filter_var($_POST['message'] ?? '', FILTER_SANITIZE_STRING);
 
-        $subject = "Contact From " . $_POST['name'];
-        $headers = "From:  noreply@tobias-termer.de";
+        // Überprüfen der Email-Adresse
+        if (!$email) {
+            die("Ungültige E-Mail-Adresse.");
+        }
 
-        mail($recipient, $subject, $_POST['message'], $headers);
+        // Entfernen von Zeilenumbrüchen aus dem Namen und der E-Mail
+        $name = str_replace(array("\r", "\n"), '', $name);
+        $email = str_replace(array("\r", "\n"), '', $email);
+
+        $subject = "Contact From " . $name;
+        $headers = "From: contact@portfolio.tobias-termer.de";
+
+        // Zusammenstellen der Nachricht
+        $fullMessage = "Name: " . $name . "\n";
+        $fullMessage .= "Email: " . $email . "\n";
+        $fullMessage .= "Nachricht:\n" . $message;
+
+        mail($recipient, $subject, $fullMessage, $headers);
         header("Location: " . $redirect); 
 
         break;
@@ -51,3 +70,5 @@ switch ($_SERVER['REQUEST_METHOD']) {
         header("Allow: POST", true, 405);
         exit;
 }
+
+?>

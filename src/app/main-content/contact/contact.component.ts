@@ -16,7 +16,7 @@ export class ContactComponent {
   @ViewChild('formMessage') formMessage!: ElementRef;
   @ViewChild('formButton') formButton!: ElementRef;
 
-  sendMail() {
+  async sendMail() {
     // action https://f0164f24@w01eabb4.kasserver.com/assets/server/send_mail.php
     console.log("Sending mail");
     let formName = this.formName.nativeElement;
@@ -30,9 +30,11 @@ export class ContactComponent {
 
     let fd = new FormData();
     fd.append('name', formName.value);
+    fd.append('email', formEmail.value);
     fd.append('message', formMessage.value);
 
-    fetch('https://f0164f24@w01eabb4.kasserver.com/assets/server/send_mail.php',
+    await fetch('https://www.portfolio.tobias-termer.de/assets/server/send_mail.php',
+    
       {
         method: 'POST',
         body: fd
