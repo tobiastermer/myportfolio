@@ -5,6 +5,7 @@ $blue: #4B47FF;
 $light_blue: #00BEE8;
 
 $padding_side: 100px;
+$padding_side_double: 200px;
 
 body {
     margin: 0;
@@ -91,7 +92,7 @@ h2 {
     transition: all 275ms ease-in-out;
     text-decoration: none;
     white-space: nowrap;
-    
+
     &:hover {
         cursor: pointer;
     }
@@ -109,6 +110,7 @@ h2 {
 .btn-project {
     background-color: $blue;
     border: 1px solid $blue;
+
     &:hover {
         border: 1px solid $light_blue;
         background-color: $light_blue;
@@ -118,23 +120,24 @@ h2 {
 .btn-git {
     background-color: $dark_blue;
     border: 1px solid $light_blue;
+
     &:hover {
         background-color: $light_blue;
     }
 }
 
-.content-text{
+.content-text {
     font-size: 16px;
     color: white;
     margin-block-start: 0;
     margin-block-end: 0;
 }
 
-.aligned-left{
+.aligned-left {
     text-align: left;
 }
 
-.aligned-right{
+.aligned-right {
     text-align: right;
 }
 
@@ -144,14 +147,25 @@ h2 {
 
 
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
     .desktop-hidden {
         display: none;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+
+    $padding_side: 100px;
+    $padding_side_double: 200px;
+
     .mobile-hidden {
         display: none !important;
     }
+}
+
+@media (max-width: 400px) {
+
+    $padding_side: 25px;
+    $padding_side_double: 50px;
+
 }

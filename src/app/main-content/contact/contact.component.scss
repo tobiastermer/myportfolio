@@ -88,12 +88,14 @@ section {
         .default-border {
             border: 1px solid $blue;
         }
-        
-        input.ng-invalid.ng-dirty, textarea.ng-invalid.ng-dirty {
+
+        input.ng-invalid.ng-dirty,
+        textarea.ng-invalid.ng-dirty {
             border: 1px solid red;
         }
-        
-        input.ng-valid, textarea.ng-valid {
+
+        input.ng-valid,
+        textarea.ng-valid {
             border: 1px solid green;
         }
 
@@ -154,6 +156,21 @@ section {
 .shadow {
     position: absolute;
     z-index: -1;
-    left: -400px;
-    top: 250px;
+    left: -450px;
+    top: 500px;
+}
+
+@media (max-width: 1280px) {
+
+    .contact-content-container {
+        flex-direction: column;
+        gap: 45px;
+
+        form {
+
+            .input-container {
+                width: 100%;
+            }
+        }
+    }
 }
