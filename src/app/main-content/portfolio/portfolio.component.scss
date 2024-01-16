@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 section {
-    width: calc(100vw - $padding_side - 0);
+    width: calc(100vw - $padding_side);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,6 +15,7 @@ section {
     display: flex;
     width: 100%;
     justify-content: flex-end;
+    gap: 35px;
 
     .portfolio-headline-content {
         display: flex;
@@ -22,6 +23,18 @@ section {
         align-items: center;
         gap: 34px;
         min-width: 471px;
+    }
+
+    .horicontal-lign {
+        margin-top: 70px;
+    }
+
+    .w-short {
+        min-width: 109px;
+    }
+
+    .w-long {
+        min-width: 484px;
     }
 
 }
@@ -36,31 +49,16 @@ section {
         position: absolute;
         z-index: -1;
     }
-    
+
     .shadow1 {
         left: -500px;
         top: 600px;
     }
-    
+
     .shadow2 {
         right: -400px;
         top: 1500px;
     }
-}
-
-.horicontal-lign {
-    height: 4px;
-    border: 0;
-    background-color: $blue;
-    margin-top: 70px;
-}
-
-.w-109 {
-    min-width: 109px;
-}
-
-.w-484 {
-    min-width: 484px;
 }
 
 .app-project:nth-child(even) {
@@ -71,3 +69,65 @@ section {
     }
 }
 
+@media (max-width: $wide-breakpoint) {}
+
+@media (max-width: $tablet-breakpoint) {
+
+    section {
+        width: calc(100vw - $padding_side / 2);
+        padding-left: calc($padding_side / 2);
+    }
+
+    .portfolio-headline-container {
+        gap: 15px;
+
+        .portfolio-headline-content {
+            width: 320px;
+            min-width: unset;
+        }
+
+        .horicontal-lign {
+            margin-top: 55px;
+        }
+
+        .w-short {
+            min-width: calc($padding_side / 4);
+        }
+
+        .w-long {
+            min-width: calc($padding_side / 2);
+        }
+
+    }
+
+}
+
+@media (max-width: $mobile-breakpoint) {
+
+    section {
+        width: calc(100vw - $padding_side / 4);
+        padding-left: calc($padding_side / 4);
+    }
+
+    .portfolio-headline-container {
+        gap: 10px;
+
+        .portfolio-headline-content {
+            width: 195px;
+        }
+
+        .horicontal-lign {
+            margin-top: 35px;
+        }
+
+        .w-short {
+            min-width: calc($padding_side / 4);
+        }
+
+        .w-long {
+            min-width: calc($padding_side / 2);
+        }
+
+    }
+
+}
