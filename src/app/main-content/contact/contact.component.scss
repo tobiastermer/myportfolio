@@ -1,12 +1,11 @@
 @import '../../../styles.scss';
 
 section {
-    width: calc(100vw - $padding_side - 0);
+    //width: calc(100vw - $padding_side);
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 100px $padding_side 100px 0;
-    // height: calc(100vh - 135px);
+    padding: 100px $padding_side 150px 0;
     overflow: hidden;
     position: relative;
 }
@@ -16,20 +15,14 @@ section {
     gap: 50px;
 
     .horicontal-lign {
-        height: 4px;
-        border: 0;
-        background-color: $blue;
         min-width: 50px;
         margin-top: 65px;
     }
-
 }
 
 .contact-headline-content {
     display: flex;
     flex-direction: column;
-
-
 }
 
 .contact-content-container {
@@ -42,31 +35,22 @@ section {
         display: flex;
         flex-direction: column;
         gap: 35px;
-
-        h3 {
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
-            margin-block-start: 0;
-            margin-block-end: 0;
-        }
     }
 
     form {
 
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 32px;
         min-width: 50%;
 
         .input-container {
-            width: calc(100% - 100px); // minus padding input fielt
+            width: 100%; // minus padding input fielt
         }
 
         input,
         textarea {
-            width: 100%;
+            width: calc(100% - 50px);
             padding: 15px 25px 15px 25px;
             border-radius: 10px;
             border: 1px solid $blue;
@@ -101,12 +85,18 @@ section {
 
         .form-privacy-check {
             display: flex;
-            align-items: center;
-            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
             gap: 10px;
             width: 100%;
             color: white;
             text-align: left;
+
+            .privacy-row {
+                display: flex;
+                gap: 12px;
+            }
 
             [type="checkbox"] {
                 width: unset;
@@ -131,6 +121,14 @@ section {
             }
         }
 
+        .pin-center {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
         button:disabled {
             background-color: gray;
             // Fügen Sie hier weitere Stile hinzu, um den Button im deaktivierten Zustand anzupassen
@@ -146,31 +144,86 @@ section {
             color: green;
             // Weitere Stile für die Erfolgsmeldung
         }
-
     }
-
-
 }
-
 
 .shadow {
     position: absolute;
     z-index: -1;
     left: -450px;
-    top: 500px;
+    bottom: -400px;
 }
 
-@media (max-width: 1280px) {
+.arrow-up {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+
+    img{
+        height: 39px;
+        width: 39px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: $wide-breakpoint) {
 
     .contact-content-container {
         flex-direction: column;
         gap: 45px;
+    }
 
-        form {
+}
 
-            .input-container {
-                width: 100%;
-            }
+@media (max-width: $tablet-breakpoint) {
+
+    section {
+        padding-right: calc($padding_side / 2);
+        gap: 35px;
+    }
+
+    .contact-content-container {
+        padding-left: calc($padding_side / 2);
+    }
+
+    .arrow-up {
+        right: calc($padding_side / 2);
+    }
+
+    .contact-headline-container {
+        gap: 5px;
+    
+        .horicontal-lign {
+            min-width: calc($padding_side / 2 - 5px);
+            margin-top: 50px;
+        }
+    }
+
+}
+
+@media (max-width: $mobile-breakpoint) {
+
+    section {
+        padding-right: calc($padding_side / 4);
+    }
+
+    .contact-content-container {
+        padding-left: calc($padding_side / 4);
+    }
+
+    .arrow-up {
+        right: calc($padding_side / 4);
+    }
+
+    .contact-headline-container {
+        gap: 5px;
+    
+        .horicontal-lign {
+            min-width: calc($padding_side / 4 - 5px);
+            margin-top: 35px;
         }
     }
 }

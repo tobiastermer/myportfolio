@@ -39,19 +39,28 @@
             </div>
             <div class="input-container">
                 <div class="form-privacy-check">
-                    <input type="checkbox" ngModel name="privacy" #formPrivacy="ngModel" required>
-                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
-                    </p>
+                    <div class="privacy-row">
+                        <input type="checkbox" ngModel name="privacy" #formPrivacy="ngModel" required>
+                        <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as
+                            outlined.
+                        </p>
+                    </div>
                     <div *ngIf="formPrivacy.invalid && formPrivacy.touched" class="error-message">You must agree to the
                         privacy policy.</div>
                 </div>
             </div>
-            <button class="btn btn-primary" [disabled]="!form.valid">Send message</button>
-            <div *ngIf="formSubmittedSuccessfully" class="success-message">Your message has been sent successfully!</div>
+            <div class="pin-center">
+                <button class="btn btn-primary" [disabled]="!form.valid">Send message</button>
+                <div *ngIf="formSubmittedSuccessfully" class="success-message">Your message has been sent successfully!
+                </div>
+            </div>
         </form>
 
     </div>
 
     <img class="shadow" src="../../../assets/img/shadow6.png" alt="">
+    <a href="#" class="arrow-up">
+        <img src="../../../assets/img/icons/arrow-up.png" alt="">
+    </a>
 
 </section>

@@ -60,9 +60,11 @@ footer {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: $tablet-breakpoint) {
 
     footer {
+        padding-left: calc($padding_side / 2);
+        padding-right: calc($padding_side / 2);
         align-items: center;
         gap: 32px;
 
@@ -77,4 +79,13 @@ footer {
         }
     }
 
-}    
+}
+
+@media (max-width: $mobile-breakpoint) {
+
+    footer{
+        padding-left: calc($padding_side / 4);
+        padding-right: calc($padding_side / 4);
+    }
+
+}

@@ -1,11 +1,11 @@
 @import '../../../styles.scss';
 
 header {
-    width: calc(100% - 200px);
+    width: calc(100% - $padding_side * 2);
     padding: 37px $padding_side 37px $padding_side;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 
     nav {
         display: flex;
@@ -94,5 +94,31 @@ header {
 
     &:hover {
         cursor: pointer;
+    }
+}
+
+@media (max-width: $tablet-breakpoint) {
+
+    header{
+        width: calc(100% - $padding_side * 1);
+        padding-left: calc($padding_side / 2);
+        padding-right: calc($padding_side / 2);
+    }
+
+    .logo-firstname {
+        width: 180px;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+
+    header{
+        width: calc(100% - $padding_side * 0.5);
+        padding-left: calc($padding_side / 4);
+        padding-right: calc($padding_side / 4);
+    }
+
+    .logo-firstname {
+        width: 150px;
     }
 }

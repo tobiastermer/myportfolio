@@ -7,11 +7,17 @@ $light_blue: #00BEE8;
 $padding_side: 100px;
 $padding_side_double: 200px;
 
+$mobile-breakpoint: 400px;
+$tablet-breakpoint: 900px;
+$wide-breakpoint: 1200px;
+
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: $dark_blue;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 
@@ -72,12 +78,18 @@ body {
 
 h2 {
     font-size: 90px;
+    white-space: nowrap;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h2, h3 {
     font-weight: bold;
     margin-block-start: 0;
     margin-block-end: 0;
     color: white;
-    // margin-bottom: 34px;
-    white-space: nowrap;
 }
 
 .btn {
@@ -145,27 +157,38 @@ h2 {
     text-align: center;
 }
 
+.horicontal-lign {
+    height: 4px;
+    border: 0;
+    background-color: $blue;
+}
 
 
-@media (min-width: 900px) {
+
+@media (min-width: $tablet-breakpoint) {
     .desktop-hidden {
         display: none;
     }
 }
 
-@media (max-width: 900px) {
-
-    $padding_side: 100px;
-    $padding_side_double: 200px;
+@media (max-width: $tablet-breakpoint) {
 
     .mobile-hidden {
         display: none !important;
     }
+
+    h2 {
+        font-size: 70px;
+    }
 }
 
-@media (max-width: 400px) {
+@media (max-width: $mobile-breakpoint) {
 
-    $padding_side: 25px;
-    $padding_side_double: 50px;
+    h2 {
+        font-size: 45px;
+    }
 
+    h3 {
+        font-size: 23px;
+    }
 }
