@@ -1,14 +1,14 @@
 @import '../../../styles.scss';
 
 section {
-    width: calc(100vw - $padding_side);
+    // width: calc(100vw - $padding_side);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 150px;
     padding: 100px 0 100px $padding_side;
     // height: calc(100vh - 135px);
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .portfolio-headline-container {
@@ -34,7 +34,7 @@ section {
     }
 
     .w-long {
-        min-width: 484px;
+        min-width: calc(50vw - 350px);
     }
 
 }
@@ -44,20 +44,21 @@ section {
     flex-direction: column;
     position: relative;
     gap: 200px;
+    padding-right: $padding_side;
 
     .shadow {
         position: absolute;
-        z-index: -1;
     }
 
     .shadow1 {
-        left: -500px;
+        left: -600px;
         top: 600px;
+        z-index: -1;
     }
 
     .shadow2 {
         right: -400px;
-        top: 1500px;
+        bottom: -550px;
     }
 }
 
@@ -74,8 +75,9 @@ section {
 @media (max-width: $tablet-breakpoint) {
 
     section {
-        width: calc(100vw - $padding_side / 2);
+        // width: calc(100vw - $padding_side / 2);
         padding-left: calc($padding_side / 2);
+        gap: 20px;
     }
 
     .portfolio-headline-container {
@@ -95,9 +97,13 @@ section {
         }
 
         .w-long {
-            min-width: calc($padding_side / 2);
+            min-width: calc(80vw - 350px);
         }
 
+    }
+
+    .portfolio-projects-container {
+        padding-right: calc($padding_side / 2);
     }
 
 }
@@ -105,7 +111,7 @@ section {
 @media (max-width: $mobile-breakpoint) {
 
     section {
-        width: calc(100vw - $padding_side / 4);
+        // width: calc(100vw - $padding_side / 4);
         padding-left: calc($padding_side / 4);
     }
 
@@ -125,9 +131,13 @@ section {
         }
 
         .w-long {
-            min-width: calc($padding_side / 2);
+            min-width: calc(90vw - 250px);
         }
 
+    }
+
+    .portfolio-projects-container {
+        padding-right: calc($padding_side / 2);
     }
 
 }
