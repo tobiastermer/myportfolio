@@ -1,3 +1,5 @@
+@import '../../../../styles.scss';
+
 .icon-child {
     display: flex;
     flex-direction: column;
@@ -8,7 +10,7 @@
 
     .icon {
         height: 60px;
-        width: fit-content;
+        height: fit-content;
         transition: transform 0.3s ease; // Hier fügen Sie die Transition hinzu
 
         &:hover {
@@ -24,4 +26,37 @@
         margin-block-end: 0;
         text-align: center;
     }
+}
+
+@media (max-width: $wide-breakpoint) {
+
+    .icon-child {
+
+        .icon {
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .icon-child {
+        .icon {
+            height: 50px;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .icon-child {
+        width: 78px;
+
+        .icon {
+            height: 45px;
+        }
+
+        .icon-label {
+            font-size: 14px;
+        }
+    }
+
 }

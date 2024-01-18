@@ -1,7 +1,6 @@
 @import '../../../styles.scss';
 
 section {
-    width: calc(100vw - $padding_side - 0);
     display: flex;
     justify-content: space-between;
     gap: 100px;
@@ -10,16 +9,24 @@ section {
     overflow-x: hidden;
 }
 
-.skills-icons-container {
+.skills-content-container {
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 123px;
-    row-gap: 54px
+    flex-direction: column;
+    gap: 80px;
+
+    .skills-icons-container {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 123px;
+        row-gap: 54px
+    }
 }
+
 
 .skills-headline-container {
     display: flex;
     gap: 42px;
+    order: 1;
 
     .skills-headline-content {
         display: flex;
@@ -28,7 +35,7 @@ section {
         gap: 34px;
         min-width: 471px;
 
-        h2{
+        h2 {
             text-align: right;
             width: 100%;
         }
@@ -36,9 +43,6 @@ section {
 
     .horicontal-lign {
         min-width: 58px;
-        height: 4px;
-        border: 0;
-        background-color: $blue;
         margin-top: 70px;
     }
 }
@@ -47,4 +51,87 @@ section {
     position: absolute;
     left: -400px;
     z-index: -1;
+}
+
+@media (max-width: $wide-breakpoint) {
+
+    .skills-content-container {
+        .skills-icons-container {
+            column-gap: 80px;
+            row-gap: 50px;
+        }
+    }
+
+    .skills-headline-container {
+        .skills-headline-content {
+            min-width: 420px;
+        }
+    }
+}
+
+@media (max-width: $tablet-breakpoint) {
+
+    section {
+        flex-direction: column;
+        padding-left: calc($padding_side / 2);
+        gap: 80px;
+    }
+
+    .skills-headline-container {
+        order: unset;
+        justify-content: flex-end;
+        gap: 5px;
+
+        .skills-headline-content {
+            min-width: unset;
+            max-width: 500px;
+        }
+
+        .horicontal-lign {
+            min-width: calc($padding_side / 2);
+            margin-top: 55px;
+        }
+    }
+
+    .skills-content-container {
+        padding-right: calc($padding_side / 2);
+        align-items: center;
+
+        .skills-icons-container {
+            column-gap: 50px;
+            row-gap: 40px;
+            justify-content: space-between;
+        }
+
+    }
+
+
+
+}
+
+@media (max-width: $mobile-breakpoint) {
+
+    section {
+        padding-left: calc($padding_side / 4);
+    }
+
+    .skills-content-container {
+        padding-right: calc($padding_side / 4);
+
+        .skills-icons-container {
+            column-gap: 20px;
+        }
+    }
+
+    .skills-headline-container {
+
+        .skills-headline-content {
+            min-width: unset;
+        }
+
+        .horicontal-lign {
+            min-width: calc($padding_side / 4 - 5px);
+            margin-top: 33px;
+        }
+    }
 }
