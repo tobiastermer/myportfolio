@@ -1,18 +1,18 @@
 @import '../../../styles.scss';
 
 section {
-    width: calc(100vw - $padding_side - 0);
     display: flex;
     justify-content: space-between;
     gap: 150px;
     padding: 100px 0 100px $padding_side;
-    // height: calc(100vh - 135px);
-    overflow: hidden;
+    align-items: flex-start;
+    position: relative;
 }
 
 .about-me-content-container {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 
     .about-me-content {
         display: flex;
@@ -42,7 +42,6 @@ section {
     padding-top: 54px;
     display: flex;
     align-items: center;
-    position: relative;
 
     .portrait {
         height: 453px;
@@ -55,14 +54,120 @@ section {
 
     .horicontal-lign {
         width: calc($padding_side + $padding_side);
-        height: 4px;
-        border: 0;
         background-color: $light_blue;
         z-index: 1;
     }
 
+}
+
+.shadow {
+    position: absolute;
+    right: -300px;
+    top: -100px;
+    z-index: 11;
+}
+
+@media (max-width: $wide-breakpoint) {
+
+    section {
+        gap: 80px;
+    }
+
+    .about-me-image-container {
+
+        .portrait {
+            height: 320px;
+            width: 320px;
+        }
+
+        .horicontal-lign {
+            width: $padding_side;
+            min-width: $padding_side;
+        }
+
+    }
+
     .shadow {
         position: absolute;
-        right: -300px;
+        right: -350px;
+        top: -150px;
     }
+
+}
+
+@media (max-width: $wide-breakpoint) {
+
+    section {
+        gap: 100px;
+    }
+
+    .about-me-image-container {
+
+        .portrait {
+            height: 320px;
+            width: 320px;
+        }
+
+        .horicontal-lign {
+            width: $padding_side;
+            min-width: $padding_side;
+        }
+
+    }
+
+}
+
+@media (max-width: 1150px) {
+
+    section {
+        gap: 65px;
+    }
+
+    .about-me-image-container {
+
+        .portrait {
+            height: 280px;
+            width: 280px;
+        }
+
+    }
+
+}
+
+@media (max-width: $tablet-breakpoint) {
+
+    section {
+        padding-left: calc($padding_side / 2);
+        padding-right: calc($padding_side / 2);
+    }
+
+    .about-me-content-container {
+        .about-me-content {
+            .content-child {
+                .icon-container {
+                    min-width: 70px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
+    .about-me-content-container {
+
+        h2 {
+            font-size: 45px;
+        }
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+
+    section {
+        padding-left: calc($padding_side / 4);
+        padding-right: calc($padding_side / 4);
+    }
+
 }

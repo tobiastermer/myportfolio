@@ -5,7 +5,7 @@ section {
     justify-content: space-between;
     padding: 0 $padding_side 0 $padding_side;
     height: calc(100vh - 135px);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .shadow {
@@ -150,7 +150,11 @@ section {
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: $wide_breakpoint) {
+
+    section {
+        padding: 0 0 0 0;
+    }
 
     .portrait {
 
@@ -162,7 +166,7 @@ section {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: $tablet_breakpoint) {
 
     .portrait {
         width: calc(100% - $padding_side_double);

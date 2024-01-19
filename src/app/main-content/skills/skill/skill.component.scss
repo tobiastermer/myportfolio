@@ -38,13 +38,7 @@
     }
 }
 
-@media (max-width: $tablet-breakpoint) {
-    .icon-child {
-        .icon {
-            height: 50px;
-        }
-    }
-}
+@media (max-width: $tablet-breakpoint) {}
 
 @media (max-width: $mobile-breakpoint) {
     .icon-child {
