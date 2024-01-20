@@ -4,7 +4,7 @@ section {
     display: flex;
     justify-content: space-between;
     padding: 0 $padding_side 0 $padding_side;
-    height: calc(100vh - 135px);
+    height: calc(100vh - 126px);
     overflow: hidden;
 }
 
@@ -35,12 +35,11 @@ section {
 }
 
 .text-container {
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 44px;
+    gap: 35px;
     z-index: 20;
 
     .headline {
@@ -53,12 +52,14 @@ section {
             transform: rotate(270deg);
             text-wrap: nowrap;
             color: white;
-            font-size: 64px;
+            font-size: 60px;
             text-align: center;
             margin-block-start: 0;
             margin-block-end: 0;
             line-height: 1;
             white-space: nowrap;
+            margin-right: -15px;
+            margin-left: -25px;
         }
 
         .main-headline {
@@ -78,7 +79,7 @@ section {
             }
 
             h3 {
-                font-size: 58px;
+                font-size: 61px;
                 font-weight: 400;
                 margin-block-start: 0;
                 margin-block-end: 0;
@@ -152,56 +153,147 @@ section {
 
 @media (max-width: $wide_breakpoint) {
 
-    section {
-        padding: 0 0 0 0;
-    }
+    .text-container {
 
-    .portrait {
+        .headline {
 
-        width: calc(100% - $padding_side_double);
-        min-width: 300px;
-        height: auto;
-        vertical-align: middle;
+            span {
+                text-wrap: nowrap;
+                font-size: 41px;
+                white-space: nowrap;
+            }
+
+            .main-headline {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                white-space: nowrap;
+
+
+                h1 {
+                    font-size: 60px;
+                    line-height: 1;
+                }
+
+                h3 {
+                    font-size: 41px;
+                    line-height: 1;
+                }
+            }
+        }
     }
 }
 
 
 @media (max-width: $tablet_breakpoint) {
 
-    .portrait {
-        width: calc(100% - $padding_side_double);
-        height: auto;
-        
+    section {
+        padding-left: calc($padding_side / 2);
+        padding-right: calc($padding_side / 2);
+        height: calc(100vh - 117px);
     }
 
+    .shadow {
+        height: calc(100vh - 250px);
+        right: 0;
+        left: 0;
+        margin: auto;
+        object-fit: cover;
+        object-position: top center;
+        max-width: 100%;
+    }
+
+    .portrait {
+        height: calc(100vh - 350px);
+        object-fit: cover;
+        object-position: top center;
+        right: 0;
+        left: 0;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    .bow {
+        bottom: 215px;
+        width: 100%;
+        height: 50vw;
+        bottom: 215px;
+        object-fit: cover;
+        min-height: unset;
+    }
+
+
     .text-container {
-    
+        position: absolute;
+        bottom: 125px;
+        left: 0;
+        right: 0;
+
         .headline {
-    
+
             span {
-                text-wrap: nowrap;
-                font-size: 32px;
-                white-space: nowrap;
+                font-size: 5.5vw;
             }
-    
+
             .main-headline {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                white-space: nowrap;
-    
-    
+
                 h1 {
-                    font-size: 45px;
-                    line-height: 1;
+                    font-size: 8vw;
                 }
-    
+
                 h3 {
-                    font-size: 29px;
-                    line-height: 1;
+                    font-size: 5.5vw;
                 }
             }
         }
     }
+
+    .social-container {
+        right: 0;
+    }
+
+    .horicontal-lign {
+        width: calc(50% - 146px);
+
+    }
+
+}
+
+@media (max-width: $mobile_breakpoint) {
+
+    section {
+        padding-left: calc($padding_side / 4);
+        padding-right: calc($padding_side / 4);
+        height: calc(100vh - 110px);
+    }
+
+    .bow {
+        bottom: 240px;
+    }
+
+    .text-container {
+        position: absolute;
+        bottom: 125px;
+
+        .headline {
+
+            span {
+                font-size: 6.5vw;
+                margin-right: -10px;
+            }
+
+            .main-headline {
+
+                h1 {
+                    font-size: 10vw;
+                }
+
+                h3 {
+                    font-size: 6.8vw;
+                }
+            }
+        }
+    }
+
 
 }

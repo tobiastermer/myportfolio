@@ -8,7 +8,7 @@ section {
     gap: 150px;
     padding: 100px 0 100px $padding_side;
     // height: calc(100vh - 135px);
-    // overflow: hidden;
+    overflow-x: hidden;
 }
 
 .portfolio-headline-container {
@@ -48,18 +48,11 @@ section {
 
     .shadow {
         position: absolute;
-    }
-
-    .shadow1 {
         left: -600px;
         top: 600px;
         z-index: -1;
     }
 
-    .shadow2 {
-        right: -400px;
-        bottom: -550px;
-    }
 }
 
 .app-project:nth-child(even) {

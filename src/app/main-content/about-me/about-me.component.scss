@@ -7,6 +7,7 @@ section {
     padding: 100px 0 100px $padding_side;
     align-items: flex-start;
     position: relative;
+    overflow: hidden;
 }
 
 .about-me-content-container {
@@ -62,8 +63,8 @@ section {
 
 .shadow {
     position: absolute;
-    right: -300px;
-    top: -100px;
+    right: -350px;
+    top: -20px;
     z-index: 11;
 }
 
@@ -89,8 +90,7 @@ section {
 
     .shadow {
         position: absolute;
-        right: -350px;
-        top: -150px;
+        right: -400px;
     }
 
 }

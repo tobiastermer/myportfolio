@@ -150,9 +150,19 @@ section {
 .shadow {
     position: absolute;
     z-index: -1;
+}
+
+.shadow1 {
+    right: -450px;
+    top: -100px;
+}
+
+
+.shadow2 {
     left: -450px;
     bottom: -400px;
 }
+
 
 .arrow-up {
     position: absolute;
