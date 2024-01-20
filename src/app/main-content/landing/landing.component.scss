@@ -19,8 +19,8 @@ section {
 .portrait {
     height: calc(100vh - 200px);
     position: absolute;
-    top: 100px;
-    z-index: 5;
+    top: 75px;
+    z-index: -1;
 }
 
 .bow {
@@ -204,7 +204,7 @@ section {
     }
 
     .portrait {
-        height: calc(100vh - 350px);
+        height: calc(100vh - 370px);
         object-fit: cover;
         object-position: top center;
         right: 0;
@@ -268,7 +268,8 @@ section {
     }
 
     .bow {
-        bottom: 240px;
+        bottom: 215px;
+        height: 60vw;
     }
 
     .text-container {

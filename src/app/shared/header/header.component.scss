@@ -7,6 +7,11 @@ header {
     justify-content: space-between;
     align-items: flex-end;
 
+    .logo-link {
+        display: flex;
+        align-items: flex-end;
+    }
+    
     nav {
         display: flex;
         gap: 29px;
