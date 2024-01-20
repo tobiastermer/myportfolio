@@ -1,0 +1,35 @@
+<header>
+    <div class="header-icon">
+        <img class="menu desktop-hidden" name="menu" (click)="toggleMenu()"
+            src="../../../assets/img/icons/burgermenu.png" alt="">
+    </div>
+    <nav [ngClass]="[menuStyle]">
+        <div class="nav-container">
+            <div class="language-container">
+                <a class="language-link" href="" (click)="clickLink()">DE</a>
+                <div class="vertical-lign"></div>
+                <a class="language-link" href="" (click)="clickLink()">EN</a>
+            </div>
+            <div class="nav-child">
+                <a class="nav-link" href="#aboutme" (click)="clickLink()">About me</a>
+                <div class="underline"></div>
+            </div>
+            <div class="nav-child">
+                <a class="nav-link" href="#skills" (click)="clickLink()">Skills</a>
+                <div class="underline"></div>
+            </div>
+            <div class="nav-child">
+                <a class="nav-link" href="#portfolio" (click)="clickLink()">Portfolio</a>
+                <div class="underline"></div>
+            </div>
+            <div class="nav-child">
+                <a class="nav-link" href="#contact" (click)="clickLink()">Contact</a>
+                <div class="underline"></div>
+            </div>
+            <div class="nav-child">
+                <a class="nav-link" href="/impressum" (click)="clickLink()">Impressum</a>
+                <div class="underline"></div>
+            </div>
+        </div>
+    </nav>
+</header>
