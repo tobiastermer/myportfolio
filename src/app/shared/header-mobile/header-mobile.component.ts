@@ -9,19 +9,29 @@ import { Component } from '@angular/core';
   styleUrl: './header-mobile.component.scss'
 })
 export class HeaderMobileComponent {
-
-  menuStyle = 'hidden';
+  menuStyle = 'd-none hidden';
 
   toggleMenu() {
-    if(this.menuStyle == 'visible') {
+    const htmlElement = document.documentElement;
+
+    if (this.menuStyle == 'visible' || this.menuStyle == 'd-flex visible') {
       this.menuStyle = 'hidden';
+      htmlElement.style.overflow = 'auto'; // Setzt overflow auf auto, wenn das Menü geschlossen wird
+      htmlElement.style.overflowX = 'hidden'; // Setzt overflow auf auto, wenn das Menü geschlossen wird
+      setTimeout(() => {
+        this.menuStyle = 'hidden d-none';
+      }, 500);
     } else {
-      this.menuStyle = 'visible';
+      this.menuStyle = 'd-flex';
+      htmlElement.style.overflow = 'hidden'; // Setzt overflow auf hidden, wenn das Menü geöffnet wird
+      setTimeout(() => {
+        this.menuStyle = 'visible';
+      }, 5);
     }
   }
 
   clickLink() {
     this.menuStyle = 'strong-hidden';
+    document.documentElement.style.overflow = 'auto'; // Setzt overflow auf auto, wenn ein Link geklickt wird
   }
-
 }

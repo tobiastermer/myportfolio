@@ -1,10 +1,10 @@
 <section id="portfolio">
 
-    <div class="portfolio-headline-container">
+    <div class="portfolio-headline-container" data-aos="fade-left" data-aos-duration="1000">
         <div class="horicontal-lign w-short"></div>
         <div class="portfolio-headline-content">
             <h2>Portfolio</h2>
-            <p class="content-text aligned-center mobile-hidden">This page is a sample of my work - please feel free to try them out.
+            <p class="content-text aligned-center mobile-hidden" data-aos="fade-right" data-aos-duration="1000">This page is a sample of my work - please feel free to try them out.
             </p>
         </div>
         <div class="horicontal-lign w-long"></div>
@@ -12,7 +12,7 @@
 
     <div class="portfolio-projects-container">
 
-        <p class="content-text aligned-center desktop-hidden">This page is a sample of my work - please feel free to try them out.
+        <p class="content-text aligned-center desktop-hidden" data-aos="fade-right" data-aos-duration="1000">This page is a sample of my work - please feel free to try them out.
         </p>
 
         <app-project *ngFor="let project of portfolio; let i = index" [projectname]="project.projectname"

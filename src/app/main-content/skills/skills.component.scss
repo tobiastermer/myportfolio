@@ -5,8 +5,7 @@ section {
     justify-content: space-between;
     gap: 100px;
     padding: 100px 0 100px $padding_side;
-    // height: calc(100vh - 135px);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .skills-content-container {
@@ -21,7 +20,6 @@ section {
         row-gap: 54px
     }
 }
-
 
 .skills-headline-container {
     display: flex;

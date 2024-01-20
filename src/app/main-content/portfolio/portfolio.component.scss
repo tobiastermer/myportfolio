@@ -1,14 +1,12 @@
 @import '../../../styles.scss';
 
 section {
-    // width: calc(100vw - $padding_side);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 150px;
     padding: 100px 0 100px $padding_side;
-    // height: calc(100vh - 135px);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .portfolio-headline-container {
@@ -48,11 +46,10 @@ section {
 
     .shadow {
         position: absolute;
-        left: -600px;
-        top: 600px;
         z-index: -1;
+        left: -650px;
+        top: 500px;
     }
-
 }
 
 .app-project:nth-child(even) {
@@ -68,7 +65,6 @@ section {
 @media (max-width: $tablet-breakpoint) {
 
     section {
-        // width: calc(100vw - $padding_side / 2);
         padding-left: calc($padding_side / 2);
         gap: 20px;
     }
@@ -104,7 +100,6 @@ section {
 @media (max-width: $mobile-breakpoint) {
 
     section {
-        // width: calc(100vw - $padding_side / 4);
         padding-left: calc($padding_side / 4);
     }
 

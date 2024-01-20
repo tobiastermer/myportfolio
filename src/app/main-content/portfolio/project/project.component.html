@@ -1,4 +1,4 @@
-<div class="project-container">
+<div class="project-container" [attr.data-aos]="index !== undefined && index % 2 === 0 ? 'fade-left' : 'fade-right'" data-aos-duration="1000">
 
     <img src="../../../assets/img/projects/{{ picture }}" alt="{{ picture }}" class="project-image"
         [ngClass]="{'reverse-order': index !== undefined && index % 2 !== 0}">

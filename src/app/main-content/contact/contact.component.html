@@ -1,12 +1,12 @@
 <section id="contact">
 
-    <div class="contact-headline-container">
+    <div class="contact-headline-container" data-aos="fade-left" data-aos-duration="1000">
         <div class="horicontal-lign"></div>
         <h2>Contact</h2>
     </div>
 
     <div class="contact-content-container">
-        <div class="contact-content-text">
+        <div class="contact-content-text" data-aos="fade-right" data-aos-duration="1000">
             <h3>Got a problem to solve?</h3>
             <p class="content-text aligned-left">Contact me through this form, I am interested in hearing you, knowing
                 your ideas and contributing to your projects with my work.
@@ -14,7 +14,7 @@
             <p class="content-text aligned-left">Need a Fullstack developer? <b>Contact me!</b>
             </p>
         </div>
-        <form (submit)="sendMail()" #form="ngForm">
+        <form (submit)="sendMail()" #form="ngForm" data-aos="fade-left" data-aos-duration="1000">
             <div class="input-container">
                 <input type="text" ngModel name="name" #formName="ngModel" required minlength="5"
                     placeholder="Your name">
