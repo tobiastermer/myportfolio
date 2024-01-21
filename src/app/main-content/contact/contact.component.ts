@@ -1,11 +1,12 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule], // FormsModule hinzugefügt
+  imports: [FormsModule, CommonModule, TranslateModule], // FormsModule hinzugefügt
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })

@@ -2,38 +2,38 @@
 
     <div class="contact-headline-container" data-aos="fade-left" data-aos-duration="1000">
         <div class="horicontal-lign"></div>
-        <h2>Contact</h2>
+        <h2 translate>Contact</h2>
     </div>
 
     <div class="contact-content-container">
         <div class="contact-content-text" data-aos="fade-right" data-aos-duration="1000">
-            <h3>Got a problem to solve?</h3>
-            <p class="content-text aligned-left">Contact me through this form, I am interested in hearing you, knowing
+            <h3 translate>Got a problem to solve?</h3>
+            <p class="content-text aligned-left" translate>Contact me through this form, I am interested in hearing you, knowing
                 your ideas and contributing to your projects with my work.
             </p>
-            <p class="content-text aligned-left">Need a Fullstack developer? <b>Contact me!</b>
+            <p class="content-text aligned-left" translate>Need a Fullstack developer? <b>Contact me!</b>
             </p>
         </div>
         <form (submit)="sendMail()" #form="ngForm" data-aos="fade-left" data-aos-duration="1000">
             <div class="input-container">
                 <input type="text" ngModel name="name" #formName="ngModel" required minlength="5"
-                    placeholder="Your name">
-                <div *ngIf="formName.invalid && formName.touched" class="error-message">Name is required and must be at
+                    placeholder="Name">
+                <div *ngIf="formName.invalid && formName.touched" class="error-message" translate>Name is required and must be at
                     least 5 characters.</div>
             </div>
             <div class="input-container">
-                <input type="email" ngModel name="email" #formEmail="ngModel" required placeholder="Your email"
+                <input type="email" ngModel name="email" #formEmail="ngModel" required placeholder="Email"
                     [class.default-border]="areAllFieldsEmpty()"
                     [class.ng-invalid]="formEmail.invalid || (formEmail.value && !isValidEmail(formEmail.value))">
                 <div *ngIf="(formEmail.invalid || (formEmail.value && !isValidEmail(formEmail.value))) && formEmail.touched"
-                    class="error-message">
+                    class="error-message" translate>
                     A valid email is required.
                 </div>
             </div>
             <div class="input-container">
                 <textarea ngModel name="message" #formMessage="ngModel" required minlength="10"
                     placeholder="Your message"></textarea>
-                <div *ngIf="formMessage.invalid && formMessage.touched" class="error-message">Message is required and
+                <div *ngIf="formMessage.invalid && formMessage.touched" class="error-message" translate>Message is required and
                     must
                     be at least 10 characters.</div>
             </div>
@@ -41,17 +41,17 @@
                 <div class="form-privacy-check">
                     <div class="privacy-row">
                         <input type="checkbox" ngModel name="privacy" #formPrivacy="ngModel" required>
-                        <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as
+                        <p translate>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as
                             outlined.
                         </p>
                     </div>
-                    <div *ngIf="formPrivacy.invalid && formPrivacy.touched" class="error-message">You must agree to the
+                    <div *ngIf="formPrivacy.invalid && formPrivacy.touched" class="error-message" translate>You must agree to the
                         privacy policy.</div>
                 </div>
             </div>
             <div class="pin-center">
-                <button class="btn btn-primary" [disabled]="!form.valid">Send message</button>
-                <div *ngIf="formSubmittedSuccessfully" class="success-message">Your message has been sent successfully!
+                <button class="btn btn-primary" [disabled]="!form.valid" translate>Send message</button>
+                <div *ngIf="formSubmittedSuccessfully" class="success-message" translate>Your message has been sent successfully!
                 </div>
             </div>
         </form>
