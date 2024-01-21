@@ -140,6 +140,9 @@ section {
     display: flex;
     align-items: center;
     transform: rotate(90deg);
+    animation: bounce 3s ease-in-out infinite;
+    animation-delay: 1s;
+    /* Startet die Wiederholung nach einer Pause von 5 Sekunden */
 
     .scroll-down-text {
         text-wrap: nowrap;
@@ -157,6 +160,36 @@ section {
         height: 20px;
     }
 }
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(90deg);
+        /* Start- und Endposition (ursprüngliche Position) */
+    }
+
+    10% {
+        transform: translateY(20px) rotate(90deg);
+        /* Bewegung nach oben */
+    }
+
+    20% {
+        transform: translateY(0px) rotate(90deg);
+        /* Bewegung nach unten */
+    }
+
+    30% {
+        transform: translateY(20px) rotate(90deg);
+        /* Rückkehr nach oben */
+    }
+
+    40% {
+        transform: translateY(0px) rotate(90deg);
+        /* Rückkehr nach oben */
+    }
+}
+
 
 @media (max-width: $wide_breakpoint) {
 
