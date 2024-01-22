@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landing',
@@ -9,5 +10,9 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./landing.component.scss'] // Ändere styleUrl zu styleUrls
 })
 export class LandingComponent {
-  // Dein Komponenten-Code
+  constructor(public translate: TranslateService) { }
+
+  get currentLanguage() {
+    return this.translate.currentLang;
+  }
 }

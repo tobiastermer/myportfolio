@@ -1,6 +1,6 @@
 @import '../../styles.scss';
 
-section{
+section {
     padding: 0 $padding_side 100px $padding_side;
     display: flex;
     flex-direction: column;
@@ -9,23 +9,41 @@ section{
     gap: 20px;
     min-height: calc(100vh - 517px);
 
-    h1,h2,p {
-        color:white;
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li {
+        color: white;
         white-space: unset;
-       
+
     }
 
-    h1{
+    h1 {
         font-size: 40px;
     }
 
-    h2{
+    h2 {
         font-size: 24px;
+        margin-block-start: 0.83em !important;
+        margin-block-end: 0.83em !important;
     }
 
-    p {
+    h3 {
+        font-size: 20px;
+        margin-block-start: 0.83em !important;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
+    p,
+    li {
         margin-block-start: 0;
-        margin-block-end: 0; 
+        margin-block-end: 0;
+        font-size: 16px;
     }
 
     a {
@@ -46,15 +64,24 @@ section{
         padding-right: calc($padding_side / 2);
         min-height: calc(100vh - 705.34px);
 
-        h1{
+        h1 {
             font-size: 32px;
         }
-    
-        h2{
+
+        h2 {
             font-size: 18px;
         }
-    
-        p{
+
+        h3 {
+            font-size: 16px;
+        }
+
+        h4 {
+            font-size: 14px;
+        }
+
+        p,
+        li {
             font-size: 14px;
         }
     }
@@ -68,5 +95,5 @@ section{
         padding-right: calc($padding_side / 4);
     }
 
-    
+
 }

@@ -15,8 +15,8 @@
         <p class="content-text aligned-center desktop-hidden" data-aos="fade-right" data-aos-duration="1000" translate>This page is a sample of my work - please feel free to try them out.
         </p>
 
-        <app-project *ngFor="let project of portfolio; let i = index" [projectname]="project.projectname"
-            [languages]="project.languages" [description]="project.description" [linkLive]="project.linkLive"
+        <app-project *ngFor="let project of portfolio; let i = index" [projectname]="project.projectname | translate"
+            [languages]="project.languages" [description]="project.description | translate" [linkLive]="project.linkLive"
             [linkGit]="project.linkGit" [picture]="project.picture" [index]="i">
         </app-project>
 

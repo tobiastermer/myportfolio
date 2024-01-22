@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header-mobile',
@@ -11,6 +11,12 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HeaderMobileComponent {
   menuStyle = 'd-none hidden';
+
+  constructor(public translate: TranslateService) {}
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+  }
 
   toggleMenu() {
     const htmlElement = document.documentElement;

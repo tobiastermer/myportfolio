@@ -58,10 +58,6 @@ section {
             color: white;
             font-size: 16px;
             font-family: 'Poppins';
-
-            &:focus {
-                border: 1px solid $light_blue;
-            }
         }
 
         textarea {
