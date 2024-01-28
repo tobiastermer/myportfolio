@@ -56,7 +56,7 @@ export class ContactComponent {
   }
 
   async performMailSend(formData: FormData) {
-    const response = await fetch('https://www.portfolio.tobias-termer.de/assets/server/send_mail.php', {
+    const response = await fetch('https://portfolio.tobias-termer.de/assets/server/send_mail.php', {
       method: 'POST',
       body: formData
     });

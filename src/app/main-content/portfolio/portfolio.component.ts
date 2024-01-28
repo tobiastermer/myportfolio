@@ -38,7 +38,7 @@ export class PortfolioComponent {
       picture: 'pokedex.png',
     },
     {
-      projectname: 'Simple CRM',
+      projectname: 'Simple CRM (follows)',
       languages: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
       linkLive: '#',
