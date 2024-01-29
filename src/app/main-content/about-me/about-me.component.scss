@@ -171,3 +171,23 @@ section {
     }
 
 }
+
+@media (min-width: $bigscreen-breakpoint) {
+
+    section {
+        padding-left: $padding_side_bigscreen;
+    }
+
+    .about-me-image-container {
+        .horicontal-lign {
+            width: $padding_side_bigscreen;
+            min-width: $padding_side_bigscreen;
+        }
+    }
+
+    .shadow {
+        position: absolute;
+        right: 0px;
+    }
+
+}

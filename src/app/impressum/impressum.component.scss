@@ -1,31 +1,34 @@
 @import '../../styles.scss';
 
-section{
+section {
     padding: 0 $padding_side 100px $padding_side;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
     gap: 20px;
-    min-height: calc(100vh - 517px);
+    min-height: calc(100vh - 549px);
+    position: relative;
 
-    h1,h2,p {
-        color:white;
+    h1,
+    h2,
+    p {
+        color: white;
         white-space: unset;
-       
+
     }
 
-    h1{
+    h1 {
         font-size: 40px;
     }
 
-    h2{
+    h2 {
         font-size: 24px;
     }
 
     p {
         margin-block-start: 0;
-        margin-block-end: 0; 
+        margin-block-end: 0;
     }
 
     a {
@@ -44,17 +47,17 @@ section{
     section {
         padding-left: calc($padding_side / 2);
         padding-right: calc($padding_side / 2);
-        min-height: calc(100vh - 705.34px);
+        min-height: calc(100vh - 814.34px);
 
-        h1{
+        h1 {
             font-size: 32px;
         }
-    
-        h2{
+
+        h2 {
             font-size: 18px;
         }
-    
-        p{
+
+        p {
             font-size: 14px;
         }
     }
@@ -66,7 +69,16 @@ section{
     section {
         padding-left: calc($padding_side / 4);
         padding-right: calc($padding_side / 4);
+        min-height: calc(100vh - 807.11px);
     }
 
-    
+}
+
+@media (min-width: $bigscreen-breakpoint) {
+
+    section {
+        padding-left: $padding_side_bigscreen;
+        padding-right: $padding_side_bigscreen;
+    }
+
 }

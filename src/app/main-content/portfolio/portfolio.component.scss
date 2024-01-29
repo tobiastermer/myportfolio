@@ -129,3 +129,15 @@ section {
     }
 
 }
+
+@media (min-width: $bigscreen-breakpoint) {
+
+    section {
+        padding-left: $padding_side_bigscreen;
+    }
+
+    .portfolio-projects-container {
+        padding-right: $padding_side_bigscreen;
+    }
+
+}

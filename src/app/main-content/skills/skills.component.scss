@@ -131,3 +131,24 @@ section {
         }
     }
 }
+
+@media (min-width: $bigscreen-breakpoint) {
+
+    section {
+        padding-left: $padding_side_bigscreen;
+    }
+
+    .skills-headline-container {
+        .horicontal-lign {
+            min-width: calc($padding_side_bigscreen - 42px);
+            margin-top: 70px;
+        }
+    }
+    
+    .shadow {
+        position: absolute;
+        left: -200px;
+        z-index: -1;
+    }
+
+}

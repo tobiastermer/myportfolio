@@ -37,14 +37,6 @@ export class PortfolioComponent {
       linkGit: 'https://github.com/tobiastermer/pokedex',
       picture: 'pokedex.png',
     },
-    {
-      projectname: 'Simple CRM (follows)',
-      languages: 'Angular | TypeScript | HTML | CSS | Firebase',
-      description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
-      linkLive: '#',
-      linkGit: '#',
-      picture: 'simplecrm.png',
-    },
   ]
 
 }

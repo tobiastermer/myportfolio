@@ -136,6 +136,14 @@ header {
     left: 100vw !important;
 }
 
+@media (min-width: $tablet-breakpoint) {
+
+    header {
+        display: none;
+    }
+
+}
+
 @media (max-width: $tablet-breakpoint) {
 
     header {

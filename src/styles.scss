@@ -7,10 +7,13 @@ $dark_grey: #414856;
 
 $padding_side: 100px;
 $padding_side_double: 200px;
+// $padding_side_bigscreen: 20vw;
+$padding_side_bigscreen: calc((100vw - 1200px) / 2);
 
 $mobile-breakpoint: 400px;
 $tablet-breakpoint: 1000px;
 $wide-breakpoint: 1250px;
+$bigscreen-breakpoint: 1920px;
 
 html {
     scroll-behavior: smooth;
@@ -167,10 +170,27 @@ h3 {
     background-color: $blue;
 }
 
+.arrow-up {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+
+    img{
+        height: 39px;
+        width: 39px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 @media (min-width: $tablet-breakpoint) {
+    
     .desktop-hidden {
         display: none;
     }
+
 }
 
 @media (max-width: $tablet-breakpoint) {
@@ -182,6 +202,12 @@ h3 {
     h2 {
         font-size: 70px;
     }
+
+    
+    .arrow-up {
+        right: calc($padding_side / 2);
+    }
+
 }
 
 @media (max-width: $mobile-breakpoint) {
@@ -192,5 +218,17 @@ h3 {
 
     h3 {
         font-size: 23px;
+    }
+
+    .arrow-up {
+        right: calc($padding_side / 4);
+    }
+
+}
+
+@media (min-width: $bigscreen-breakpoint) {
+
+    .arrow-up {
+        right: $padding_side_bigscreen;
     }
 }

@@ -7,7 +7,8 @@ section {
     align-items: flex-start;
     text-align: left;
     gap: 20px;
-    min-height: calc(100vh - 517px);
+    min-height: calc(100vh - 549px);
+    position: relative;
 
     h1,
     h2,
@@ -54,7 +55,6 @@ section {
         }
     }
 
-
 }
 
 @media (max-width: $tablet-breakpoint) {
@@ -62,7 +62,7 @@ section {
     section {
         padding-left: calc($padding_side / 2);
         padding-right: calc($padding_side / 2);
-        min-height: calc(100vh - 705.34px);
+        min-height: calc(100vh - 814.34px);
 
         h1 {
             font-size: 32px;
@@ -93,7 +93,16 @@ section {
     section {
         padding-left: calc($padding_side / 4);
         padding-right: calc($padding_side / 4);
+        min-height: calc(100vh - 807.11px);
     }
 
+}
+
+@media (min-width: $bigscreen-breakpoint) {
+
+    section{
+        padding-left: $padding_side_bigscreen;
+        padding-right: $padding_side_bigscreen;
+    }
 
 }

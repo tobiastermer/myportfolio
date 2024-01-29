@@ -24,8 +24,8 @@
                     least 5 characters.</div>
             </div>
             <div class="input-container">
-                <input type="email" ngModel name="email" #formEmail="ngModel" required [attr.placeholder]="'Your Email' | translate"
-                    [class.default-border]="areAllFieldsEmpty()"
+                <input type="email" ngModel name="email" #formEmail="ngModel" required
+                    [attr.placeholder]="'Your Email' | translate" [class.default-border]="areAllFieldsEmpty()"
                     [class.ng-invalid]="formEmail.invalid || (formEmail.value && !isValidEmail(formEmail.value))">
                 <div *ngIf="(formEmail.invalid || (formEmail.value && !isValidEmail(formEmail.value))) && formEmail.touched"
                     class="error-message" translate>
@@ -36,7 +36,8 @@
                 <!-- <textarea ngModel name="message" #formMessage="ngModel" required minlength="10"
                     placeholder="Your message"></textarea> -->
                 <textarea ngModel name="message" #formMessage="ngModel" required minlength="10"
-                    [attr.placeholder]="'Your message' | translate" [class.default-border]="areAllFieldsEmpty()"></textarea>
+                    [attr.placeholder]="'Your message' | translate"
+                    [class.default-border]="areAllFieldsEmpty()"></textarea>
                 <div *ngIf="formMessage.invalid && formMessage.touched" class="error-message" translate>Message is
                     required and
                     must
@@ -46,7 +47,8 @@
                 <div class="form-privacy-check">
                     <div class="privacy-row">
                         <input type="checkbox" ngModel name="privacy" #formPrivacy="ngModel" required>
-                        <p translate>I've read the <a href="/datenschutz" target="_blank" translate>privacy policy</a> and agree to the processing
+                        <p translate>I've read the <a href="/datenschutz" target="_blank" translate>privacy policy</a>
+                            and agree to the processing
                             of my data
                             as
                             outlined.
@@ -59,9 +61,9 @@
             </div>
             <div class="pin-center">
                 <button class="btn btn-primary" [disabled]="!form.valid" translate>Send message</button>
+                <div *ngIf="!form.valid" class="overlay" (click)="checkFormValidity()"></div>
                 <div *ngIf="formSubmittedSuccessfully" class="success-message" translate>Your message has been sent
-                    successfully!
-                </div>
+                    successfully!</div>
             </div>
         </form>
 

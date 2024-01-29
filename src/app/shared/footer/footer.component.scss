@@ -108,3 +108,13 @@ footer {
     }
 
 }
+
+@media (min-width: $bigscreen-breakpoint) {
+
+    footer{
+        // width: calc(100% - $padding_side_bigscreen * 2);
+        padding-left: $padding_side_bigscreen;
+        padding-right: $padding_side_bigscreen;
+    }
+
+}

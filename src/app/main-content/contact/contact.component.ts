@@ -60,11 +60,11 @@ export class ContactComponent {
       method: 'POST',
       body: formData
     });
-  
+
     if (!response.ok) {
       throw new Error('Netzwerkantwort war nicht ok.');
     }
-  
+
     // Formular zurücksetzen und Erfolgsmeldung anzeigen
     this.form.reset();
     this.formSubmittedSuccessfully = true;
@@ -80,4 +80,27 @@ export class ContactComponent {
       }
     });
   }
+
+  // Neue Methode, die aufgerufen wird, wenn der Senden-Button geklickt wird
+  onFormSubmitAttempt() {
+    if (this.form.invalid) {
+      this.markAllAsTouched(); // Markiert alle Formularfelder als "berührt", um Fehlermeldungen zu aktivieren
+      // Hier können Sie weitere Aktionen hinzufügen, z.B. Scrollen zu dem ersten ungültigen Feld
+    }
+  }
+
+  // Methode, die aufgerufen wird, wenn auf die transparente Schicht geklickt wird
+  checkFormValidity() {
+    if (this.form.invalid) {
+      this.markAllAsTouched();
+    }
+  }
+
+  // Hilfsmethode, um alle Formularfelder als "berührt" zu markieren
+  markAllAsTouched() {
+    Object.values(this.form.controls).forEach(control => {
+      control.markAsTouched();
+    });
+  }
+
 }
